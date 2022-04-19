@@ -1,25 +1,31 @@
 import React from 'react';
 
 import { RecoilRoot } from 'recoil';
-import CssBaseline from '@material-ui/core/CssBaseline';
+
+import CssBaseline from '@mui/material/CssBaseline';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { SnackbarProvider } from 'notistack';
 
 import withErrorHandler from 'errorHandling';
 import ErrorBoundaryFallback from 'errorHandling/Fallbacks';
 
-import Layout from 'sections/Layout';
+import Layout from 'Layouts/MainLayout';
 import Fb from 'components/Fb';
-import ThemeProvider from 'theme';
 
 import { BrowserRouter as Router } from 'react-router-dom';
+
+const theme = createTheme();
 
 function App() {
   return (
     <RecoilRoot>
-      <ThemeProvider>
-        <Fb>
+      <ThemeProvider theme={theme}>
+        <Fb style={{ flexDirection: 'column' }}>
           <CssBaseline />
           <Router>
-            <Layout />
+            <SnackbarProvider maxSnack={3}>
+              <Layout />
+            </SnackbarProvider>
           </Router>
         </Fb>
       </ThemeProvider>

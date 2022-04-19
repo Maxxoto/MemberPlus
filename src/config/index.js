@@ -1,17 +1,17 @@
 import isMobile from 'utils/isMobile';
 
 /* set your data here */
-const email = 'super-email-of-the-auther@gmail.com';
+const email = 'ahmatdanis24@gmail.com';
 const domain = 'your-project-domain.com';
 /* ***************** */
 
 const messages = {
   app: {
     crash: {
-      title: 'Oooops... Sorry, I guess, something went wrong. You can:',
+      title: 'Something went wrong !',
       options: {
         email: `contact with author by this email - ${email}`,
-        reset: 'Press here to reset the application'
+        reset: 'Reset the application'
       }
     }
   },
@@ -32,7 +32,7 @@ const copyright = {
 const themes = {
   light: {
     palette: {
-      type: 'light',
+      mode: 'light',
       background: {
         default: '#fafafa',
         paper: '#fff'
@@ -48,7 +48,7 @@ const themes = {
 
   dark: {
     palette: {
-      type: 'dark',
+      mode: 'dark',
       background: {
         default: '#111',
         paper: '#171717'

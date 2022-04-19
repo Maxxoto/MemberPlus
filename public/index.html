@@ -4,41 +4,21 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <!-- https://web.dev/uses-rel-preconnect -->
-    <link rel="preconnect" href="https://storage.googleapis.com">
+    <link rel="preconnect" href="https://storage.googleapis.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#101010" />
     <meta name="keywords" content="react, pwa, boilerplate, template" />
 
-    <meta
-      name="description"
-      content="React Progressive Web Application"
-      data-react-helmet="true"
-    />
-    <meta
-      property="og:title"
-      content="React PWD"
-      data-react-helmet="true"
-    >
+    <meta name="description" content="React Progressive Web Application" data-react-helmet="true" />
+    <meta property="og:title" content="React PWD" data-react-helmet="true" />
     <meta
       property="og:description"
       content="React Progressive Web Application"
       data-react-helmet="true"
-    >
-    <meta
-      property="og:url"
-      content="%PUBLIC_URL%"
-      data-react-helmet="true"
-    >
-    <meta
-      property="og:image"
-      content="%PUBLIC_URL%/images/cover.png"
-      data-react-helmet="true"
     />
-    <meta
-      name="twitter:card"
-      content="summary"
-      data-react-helmet="true"
-    />
+    <meta property="og:url" content="%PUBLIC_URL%" data-react-helmet="true" />
+    <meta property="og:image" content="%PUBLIC_URL%/images/cover.png" data-react-helmet="true" />
+    <meta name="twitter:card" content="summary" data-react-helmet="true" />
     <meta property="og:type" content="website" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -47,7 +27,12 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" crossorigin="use-credentials" />
     <!-- https://web.dev/defer-non-critical-css/ -->
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
 
     <title>React PWA</title>
 
@@ -74,10 +59,10 @@
 
         if (document.addEventListener) {
           document.addEventListener('DOMContentLoaded', injectScripts);
-        } else { // before IE 9
+        } else {
+          // before IE 9
           document.attachEvent('DOMContentLoaded', injectScripts);
         }
-
       }
     </script>
   </head>
@@ -87,7 +72,7 @@
       // set the body color before app initialization, to avoid blinking
       var themeMode = localStorage.getItem('theme-mode');
       var initialBodyStyles = document.createElement('style');
-      var currentBodyColor = themeMode === 'light' ? '#fafafa': '#111';
+      var currentBodyColor = themeMode === 'light' ? '#fafafa' : '#111';
       initialBodyStyles.innerText = 'body { background-color: ' + currentBodyColor + ' }';
       document.head.appendChild(initialBodyStyles);
     </script>

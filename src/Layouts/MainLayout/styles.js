@@ -1,16 +1,14 @@
 import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles((theme) => ({
-  spacer: theme.mixins.toolbar,
   wrapper: {
     flexGrow: 1,
-    height: '100vh',
+    height: `calc(100vh - ${theme.mixins.toolbar.minHeight * 2}px - ${theme.spacing(1)})`,
     overflow: 'hidden',
     position: 'relative'
   },
   content: {
-    width: '100%',
-    height: `calc(100% - ${theme.mixins.toolbar + theme.spacing(1)}px)`
+    width: '100%'
   }
 }));
 

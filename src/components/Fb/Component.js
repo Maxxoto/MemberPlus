@@ -59,7 +59,11 @@ const Fb = forwardRef(function Fb(props, ref) {
   });
 
   return (
-    <Box ref={ref} {...otherProps} className={combinedClassNames}>
+    <Box
+      ref={ref}
+      {...otherProps}
+      className={combinedClassNames}
+      sx={{ maxWidth: 'sm', margin: 'auto', background: '#FFF' }}>
       {children}
     </Box>
   );

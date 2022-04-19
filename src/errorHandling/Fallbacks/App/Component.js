@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 import { FaRedo as ResetIcon } from 'react-icons/fa';
 
@@ -28,8 +28,10 @@ function AppErrorBoundaryFallback() {
           </div>
           <Typography component="h6">or</Typography>
           <div>
-            <Button onClick={resetApp}>
-              {messages.app.crash.options.reset} <ResetIcon />
+            <br />
+            <Button variant="contained" color="error" onClick={resetApp}>
+              <ResetIcon />
+              &nbsp;&nbsp;{messages.app.crash.options.reset}
             </Button>
           </div>
         </div>

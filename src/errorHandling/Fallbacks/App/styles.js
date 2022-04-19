@@ -1,11 +1,12 @@
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles(() => ({
   wrapper: {
     height: '100%',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    textAlign: 'center'
   },
   paper: {
     padding: 40,

@@ -37,7 +37,11 @@
     "no-shadow": 0,
     "prefer-template": 0,
     "react/function-component-definition":0,
-    "react/destructuring-assignment":0
+    "react/destructuring-assignment":0,
+    "react/jsx-no-bind": [1, {
+      "allowArrowFunctions": true,
+      "allowFunctions": true
+    }]
   },
   "settings": {
     "import/resolver": {
@@ -47,6 +51,6 @@
       }
     }
   },
-  "ignorePatterns": ["**/node_modules/**"]
+  "ignorePatterns": ["**/node_modules/**","public"]
 
 }

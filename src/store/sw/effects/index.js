@@ -5,7 +5,7 @@ const [getSW, setSW] = state.create({ registration: null });
 
 function update() {
   const SW = getSW();
-  const registrationWaiting = SW.registration?.waiting;
+  const registrationWaiting = SW.registration.waiting;
 
   if (registrationWaiting) {
     registrationWaiting.postMessage({ type: 'SKIP_WAITING' });

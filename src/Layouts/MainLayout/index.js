@@ -1,9 +1,10 @@
 import React from 'react';
 
 import Content from 'sections/Content';
-import Copyright from 'sections/Copyright';
-import Navigation from 'sections/Navigation';
-import Notifications from 'sections/Notifications';
+
+import AppBar from 'components/AppBar';
+import BottomBar from 'components/BottomBar';
+// import Notifications from 'sections/Notifications';
 
 import Fb from 'components/Fb';
 import useStyles from './styles';
@@ -13,15 +14,14 @@ function Layout() {
 
   return (
     <>
-      <Notifications />
-      <Navigation />
-      <Fb component="main" className={classes.wrapper}>
-        <Fb className={classes.spacer} />
+      {/* <Notifications /> */}
+      <AppBar />
+      <Fb className={classes.wrapper}>
         <Fb column justifyBetween className={classes.content}>
           <Content />
-          <Copyright />
         </Fb>
       </Fb>
+      <BottomBar />
     </>
   );
 }

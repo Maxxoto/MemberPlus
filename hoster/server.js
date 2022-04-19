@@ -18,7 +18,7 @@ function setCustomCacheControl(res, path) {
   }
 }
 
-async function init() {
+const init = async () => {
   const app = express();
 
   app.use(
@@ -34,7 +34,7 @@ async function init() {
   });
 
   app.listen(port);
-}
+};
 
 init()
   .then(() => console.info(`Listening on port ${port}`))
