@@ -12,9 +12,8 @@ function Loading({ size, withoutBackground, position = 'absolute' }) {
   return (
     <Paper
       elevation={0}
-      square={true}
-      className={clsx(classes.preloader, withoutBackground && classes.open)}
-    >
+      square
+      className={clsx(classes.preloader, withoutBackground && classes.open)}>
       <CircularProgress thickness={1.5} color="inherit" size={size} />
     </Paper>
   );

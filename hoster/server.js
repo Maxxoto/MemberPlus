@@ -6,7 +6,7 @@ const port = process.env.PORT || 8089;
 const indexTmplPath = path.join(__dirname, '../build/index.html');
 
 function setCustomCacheControl(res, path) {
-  const hashRegExp = new RegExp('\\.[0-9a-f]{8}\\.');
+  const hashRegExp = /\.[0-9a-f]{8}\./;
 
   if (path.endsWith('.html')) {
     // Never cache index.html or other .html files

@@ -13,6 +13,7 @@
     "add": "^2.0.6",
     "clsx": "^1.1.1",
     "dayjs": "^1.8.28",
+    "express": "^4.17.1",
     "is-mobile": "^2.2.1",
     "notistack": "^2.0.4",
     "prop-types": "^15.8.1",
@@ -54,6 +55,11 @@
       "last 1 safari version"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint"
+    }
+  },
   "devDependencies": {
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
@@ -64,7 +70,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
-    "express": "^4.17.1",
     "husky": "^4.3.0",
     "prettier": "^2.6.2"
   }
